@@ -1,11 +1,10 @@
-import { process } from "/env";
 import { Configuration, OpenAIApi } from "openai";
 // import 'dotenv/config'
 const setupInputContainer = document.getElementById("setup-input-container");
 const movieBossText = document.getElementById("movie-boss-text");
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY, //  <---------------- put my key here
 });
 
 const openai = new OpenAIApi(configuration);
